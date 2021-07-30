@@ -1,3 +1,9 @@
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
 body {
     background-color: #0F152C;
     color: white;
@@ -63,7 +69,7 @@ hr {
 
 @media only screen and (min-width: 750px) {
     #name {
-        animation: type 1.5s steps(12), blink 1s step-end infinite;
+        animation: type 1s steps(12), blink 1s step-end infinite;
         animation-delay: 0s, 1.5s;
         width: 100%;
         overflow: hidden;

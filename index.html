@@ -19,14 +19,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script>
-            $(document).ready(function(){
-                            AOS.init({
-                                            once: true
-                                        });
-                        });
-                        $("p").click(function(e){
-                                        e.preventDefault();
-                                    });
+
+            $(document).ready(function() {
+                AOS.init({once: true});
+            });
+                        
+            $("p").click(function(e) {
+                e.preventDefault();
+            });
+
+            var scrollEventHandler = function() {
+                window.scroll(0, window.pageYOffset)
+            }
+
+            window.addEventListener("scroll", scrollEventHandler, false);
+
         </script>
     </head>
 
@@ -45,7 +52,7 @@
         </div>
 
         <hr class="m-5">
-        
+
         <div class="heading" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
             <h2>Resume</h2>
         </div>
@@ -55,10 +62,26 @@
         </div>
 
         <div class="heading" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <h2>Programming Projects</h2>
+            <h2>Independent Projects</h2>
         </div>
+
         <div class="m-5">
-            <h3 data-aos="fade-up" data-aos-duration="400" >If you're interested in checking out the source code for a project, simply click its title!</h3>
+            <h3 data-aos="fade-up" data-aos-duration="400">
+                If you want to check out more of my projects besides the ones shown below, check out <a href="https://github.com/ag2718">my GitHub page</a> (there are many cool ones not featured here)!
+            </h3>
+        </div>
+
+        <div data-aos="fade-left" data-aos-duration="600" class="row project">
+            <div class="col-xl-1"></div>
+            <div class="col-xl-6">
+                <video controls="controls" name="Arduino WiFi-Integrated Lamp" src="media/ArduinoWiFiLamp.mp4"></video>
+            </div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-3">
+                <h2 class="mt-5 mb-5">Arduino WiFi Lamp</h2>
+                <p>This is a WiFi-integrated lamp controlled through a phone app. The project contains an Arduino Mega, ESP2866 WiFi module, relay, extension cord, and protoboard for soldering.</p>
+            </div>
+            <div class="col-xl-1"></div>
         </div>
 
         <div data-aos="fade-left" data-aos-duration="600" class="row project">
@@ -102,7 +125,7 @@
                 <a href="https://github.com/ag2718/Fourier-Transform">
                     <h2 class="mt-5 mb-5">Discrete Fourier Transform</h2>
                 </a>
-                <p>This is a Python implementation of the discrete Fourier transform, which breaks down any discrete function into its component frequencies and their respective strengths (explanation in video).</p>
+                <p>This is a Python implementation of the discrete Fourier transform, which breaks down any discrete function into the strengths of its component frequencies.</p>
             </div>
             <div class="col-xl-1"></div>
         </div>
@@ -123,7 +146,7 @@
         </div>
 
         <div class="m-5">
-            <h3 data-aos="fade-up" data-aos-duration="400" >I wrote this website in HTML and CSS. Check out the full website source code out <a href="https://github.com/ag2718/ag2718.github.io">here</a>! Additionally, if you want to check out more of my projects besides the ones shown above, check out <a href="https://github.com/ag2718">my GitHub page</a>!</h3>
+            <h3 data-aos="fade-up" data-aos-duration="400" >I wrote this website in HTML and CSS. Check out the full website source code out <a href="https://github.com/ag2718/ag2718.github.io">here</a>!</h3>
         </div>
 
 
