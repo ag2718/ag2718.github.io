@@ -70,7 +70,7 @@ hr {
 @media only screen and (min-width: 750px) {
     #name {
         animation: type 1s steps(12), blink 1s step-end infinite;
-        animation-delay: 1s, 1.5s;
+        animation-delay: 0.5s, 1.5s;
         animation-fill-mode: forwards;
         width: 0%;
         overflow: hidden;
