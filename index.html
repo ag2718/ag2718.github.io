@@ -18,21 +18,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+
         <script>
 
-            $(document).ready(function() {
-                AOS.init({once: true});
-            });
-                        
-            $("p").click(function(e) {
-                e.preventDefault();
-            });
-
-            var scrollEventHandler = function() {
-                window.scroll(0, window.pageYOffset)
-            }
-
-            window.addEventListener("scroll", scrollEventHandler, false);
 
         </script>
     </head>
@@ -53,7 +43,7 @@
 
         <hr class="m-5">
 
-        <div class="heading" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+        <div class="center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
             <h2>Resume</h2>
         </div>
 
@@ -61,95 +51,36 @@
             <embed src="media/Resume.pdf" width="100%" height="100%" />
         </div>
 
-        <div class="heading" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <h2>Personal Projects</h2>
+        <div class="center" data-aos="fade-up" data-aos-duration="400" data-aos-delay="100">
+            <h2>Featured Projects</h2>
         </div>
 
-        <div class="m-5">
-            <h3 data-aos="fade-up" data-aos-duration="400">
+        <div class="mb-5 mt-4 center">
+            <h3 data-aos="fade-up" data-aos-duration="450" data-aos-delay="100">
                 Featured below are some of the favorite projects I have worked on!
             </h3>
         </div>
 
-        <div data-aos="fade-left" data-aos-duration="600" class="row project">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-6">
-                <video controls="controls" name="Arduino WiFi-Integrated Lamp" src="media/ArduinoWiFiLamp.mp4"></video>
-            </div>
-            <div class="col-xl-1"></div>
-            <div class="col-xl-3">
-                <h2 class="mt-5 mb-5">Arduino WiFi Lamp</h2>
-                <p>This is a WiFi-integrated lamp controlled through a phone app. The project contains an Arduino Mega, ESP2866 WiFi module, relay, extension cord, and protoboard for soldering.</p>
-            </div>
-            <div class="col-xl-1"></div>
+        <div x-data="projects">
+            <template x-for="proj in projects">
+                <div x-bind:data-aos="proj.fadeDir" data-aos-duration="600" class="row project">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-6">
+                        <video controls="controls" x-bind:name="proj.name" x-bind:src="proj.filepath"></video>
+                    </div>
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-3">
+                        <h2 class="mt-5 mb-5" x-text="proj.name"></h2>
+                        <p x-text="proj.desc"></p>
+                    </div>
+                    <div class="col-xl-1"></div>
+                </div>
+            </template>
         </div>
 
-        <div data-aos="fade-left" data-aos-duration="600" class="row project">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-6">
-                <video controls="controls" name="High Flyer Demo" src="media/HighFlyer.mov"></video>
-            </div>
-            <div class="col-xl-1"></div>
-            <div class="col-xl-3">
-                <a href="https://github.com/ag2718/High-Flyer-Video-Game">
-                    <h2 class="mt-5 mb-5">High Flyer</h2>
-                </a>
-                <p>This is High Flyer, an arcade-style game where the player needs to dodge obstacles while attempting to fly as high as possible. The project was written in Python. </p>
-            </div>
-            <div class="col-xl-1"></div>
-        </div>
-
-        <div data-aos="fade-right" data-aos-duration="400" class="row project">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-6">
-                <video controls="controls" name="COVID-19 Simulation Demo" src="media/COVID19-Simulation.mov"></video>
-            </div>
-            <div class="col-xl-1"></div>
-            <div class="col-xl-3">
-                <a href="https://github.com/ag2718/Epidemic-Simulation">
-                    <h2 class="mt-5 mb-5">COVID-19 Simulation </h2>
-                </a>
-                <p>This is a Javascript simulation that aims to model the spread of the COVID-19 pandemic. Despite some simplifying assumptions, the results line up well with real world case count trends.</p>
-            </div>
-            <div class="col-xl-1">
-            </div>
-        </div>
-
-        <div data-aos="fade-left" data-aos-duration="400" class="row project">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-6">
-                <video controls="controls" name="Discrete Fourier Transform" src="media/Fourier.mp4"></video>
-            </div>
-            <div class="col-xl-1"></div>
-            <div class="col-xl-3">
-                <a href="https://github.com/ag2718/Fourier-Transform">
-                    <h2 class="mt-5 mb-5">Discrete Fourier Transform</h2>
-                </a>
-                <p>This is a Python implementation of the discrete Fourier transform, which breaks down any discrete function into the strengths of its component frequencies.</p>
-            </div>
-            <div class="col-xl-1"></div>
-        </div>
-
-        <div data-aos="fade-right" data-aos-duration="400" class="row project">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-6">
-                <video controls="controls" name="COVID-19 Data Visualization Dashboard" type="video/mov" src="media/COVID-Dashboard.mov"></video>
-            </div>
-            <div class="col-xl-1"></div>
-            <div class="col-xl-3">
-                <a href="https://github.com/ag2718/COVID-19-Data-Visualizations">
-                    <h2 class="mt-5 mb-5">COVID-19 Data Visualization Dashboard</h2>
-                </a>
-                <p>This is a dashboard created in Python which displays a variety of different visualizations for both US and global COVID-19 case data collected by Johns Hopkins University.</p>
-            </div>
-            <div class="col-xl-1"></div>
-        </div>
-
-        <div class="m-5">
+        <div class="m-5 center">
             <h3 data-aos="fade-up" data-aos-duration="400" >I wrote this website in HTML and CSS. Check out the full website source code out <a href="https://github.com/ag2718/ag2718.github.io">here</a>!</h3>
         </div>
-
-
 
     </body>
 

@@ -3,6 +3,11 @@ html {
     overflow-x: hidden;
 }
 
+@media only screen and (max-width: 500px) {
+    * {
+        font-size: 2vw;
+    }
+}
 
 body {
     background-color: #0F152C;
@@ -14,6 +19,13 @@ h1, h2 {
     color: #A4F5F5;
 }
 
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
 
 video {
     max-width: 100%;
@@ -33,22 +45,25 @@ hr {
     background-color: white;
 }
 
+.center {
+    text-align: center;
+}
+
 #hero {
     width: 100%;
     height: 80vh;
-    background: linear-gradient(to bottom, #1F253C50, #0F152CFF), url("media/Aarush2.jpg") top right / cover no-repeat, linear-gradient(#2F354C50 0%, #2F354C80);
     font-family: 'B612 Mono', monospace;
 }
 
 @media only screen and (min-width: 750px) {
     #hero {
-        background: linear-gradient(to bottom, #1F253C50, #0F152CFF), url("media/Aarush2.jpg") top right / cover no-repeat, linear-gradient(#2F354C50 0%, #2F354C80);
+        background: linear-gradient(to bottom, #1F253C50, #0F152CFF), url("media/Aarush.jpg") top right / cover no-repeat, linear-gradient(#2F354C50 0%, #2F354C80);
     }
 }
 
 @media only screen and (max-width: 750px) {
     #hero {
-        background: linear-gradient(to bottom, #1F253C50, #0F152CFF), url("media/Aarush.jpg") top / cover no-repeat, linear-gradient(#2F354C50 0%, #2F354C80);
+        background: linear-gradient(to bottom, #1F253C50, #0F152CFF), url("media/Aarush2.jpg") top / cover no-repeat, linear-gradient(#2F354C50 0%, #2F354C80);
     }
 }
 
@@ -79,11 +94,6 @@ hr {
     }
 }
 
-@media only screen and (max-width: 500px) {
-    * {
-        font-size: 2vw;
-    }
-}
 
 @keyframes type {
     from {
@@ -99,23 +109,12 @@ hr {
     }    
 }
 
-h2 {
-    font-size: 1.75rem;
-}
-
-h3 {
-    font-size: 1.2rem;
-}
-
 #mhs {
     margin-bottom: 3rem;
     padding-left: 2rem;
     color: white;
 }
 
-.heading {
-    text-align: center;
-}
 
 .project {
     border-style: solid;
