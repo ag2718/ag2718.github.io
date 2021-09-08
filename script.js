@@ -12,6 +12,12 @@ var scrollEventHandler = function() {
 
 window.addEventListener("scroll", scrollEventHandler, false);
 
+var ua = window.navigator.userAgent;
+
+if (ua.indexOf('MSIE ') > 0 || ua.indexOf('Trident/') > 0) {
+    document.getElementsByTagName("BODY")[0].innerHTML = "Internet explorer not supported. Please use a different browser."
+}
+
 projects = [
     {
         name: "Arduino WiFi Lamp",
