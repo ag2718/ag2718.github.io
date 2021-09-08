@@ -15,7 +15,7 @@ window.addEventListener("scroll", scrollEventHandler, false);
 var ua = window.navigator.userAgent;
 
 if (ua.indexOf('MSIE ') > 0 || ua.indexOf('Trident/') > 0) {
-    let errorMsg = "<div class="center"><h2 class="m-5"> Internet explorer is not supported. Please use a different browser.</h2></div>";
+    let errorMsg = "<div class=\"center\"><h2 class=\"m-5\"> Internet explorer is not supported. Please use a different browser.</h2></div>";
     document.getElementsByTagName("body")[0].innerHTML = errorMsg;
 }
 
