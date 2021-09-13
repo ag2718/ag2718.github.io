@@ -84,8 +84,8 @@ hr {
 
 @media only screen and (min-width: 750px) {
     #name {
-        animation: type 1s steps(12), blink 1s step-end infinite;
-        animation-delay: 0.5s, 1.5s;
+        animation: type 1s steps(12), blink 2s step-end infinite;
+        animation-delay: 1.2s, 1.5s;
         animation-fill-mode: forwards;
         width: 0%;
         overflow: hidden;
@@ -93,7 +93,6 @@ hr {
         border-right: 1px solid #A4F5F5;
     }
 }
-
 
 @keyframes type {
     from {
@@ -119,16 +118,16 @@ hr {
 .project {
     border-style: solid;
     border-width: 1px;
-    border-color: gray;
+    border-color: white;
     border-radius: 0.5rem;
     margin: 2rem;
     padding: 1rem;
 }
-.project:hover {
-    animation: enlarge-border 0.1s;
-    border-width: 5px;
-    border-color: white;
-}
+/* .project:hover { */
+/*     animation: enlarge-border 0.3s; */
+/*     border-width: 5px; */
+/*     border-color: white; */
+/* } */
 @keyframes enlarge-border {
     from {
         border-width: 1px;

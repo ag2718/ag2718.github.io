@@ -1,3 +1,10 @@
+var ua = window.navigator.userAgent;
+
+if (ua.indexOf('MSIE ') > 0 || ua.indexOf('Trident/') > 0) {
+    let errorMsg = "<div class=\"center\"><h2 class=\"m-5\"> Internet Explorer is not supported. Please use a different browser.</h2></div>";
+    document.getElementsByTagName("body")[0].innerHTML = errorMsg;
+}
+
 $(document).ready(function() {
     AOS.init({once: true});
 });
@@ -12,15 +19,7 @@ var scrollEventHandler = function() {
 
 window.addEventListener("scroll", scrollEventHandler, false);
 
-var ua = window.navigator.userAgent;
-
-if (ua.indexOf('MSIE ') > 0 || ua.indexOf('Trident/') > 0) {
-    let errorMsg = "<div class=\"center\"><h2 class=\"m-5\"> Internet explorer is not supported. Please use a different browser.</h2></div>";
-    document.getElementsByTagName("body")[0].innerHTML = errorMsg;
-}
-
-projects = [
-    {
+projects = [{
         name: "Arduino WiFi Lamp",
         filepath: "media/ArduinoWiFiLamp.mp4",
         desc: "This is a WiFi-integrated lamp controlled through a phone app. The project contains an Arduino Mega, ESP2866 WiFi module, relay, extension cord, and protoboard for soldering.",
