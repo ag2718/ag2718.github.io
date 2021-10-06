@@ -52,7 +52,7 @@
             <embed src="media/Resume.pdf" width="100%" height="100%" />
         </div>
 
-        <hr style="background-color: transparent">
+        <hr class="m-3" style="background-color: transparent">
 
         <div class="center m-5" data-aos="fade-up" data-aos-duration="400" data-aos-delay="100">
             <h2>Featured Projects</h2>
@@ -63,12 +63,19 @@
                 <div x-bind:data-aos="proj.fadeDir" data-aos-duration="400" data-aos-delay="50" class="row project">
                     <div class="col-xl-1"></div>
                     <div class="col-xl-6">
-                        <video controls="controls" x-bind:name="proj.name" x-bind:src="proj.filepath"></video>
+                        <template x-if="proj.isLink">
+                            <a x-bind:href="proj.url"><img x-bind:src="proj.thumbnail" width="100%"></a>
+                        </template>
+                        <template x-if="!proj.isLink">
+                            <video controls="controls" x-bind:name="proj.name" x-bind:src="proj.filepath"></video>
+                        </template>
                     </div>
                     <div class="col-xl-1"></div>
                     <div class="col-xl-3">
                         <h2 class="mt-5 mb-5" x-text="proj.name"></h2>
-                        <p x-text="proj.desc"></p>
+                        <div class="desc-div">
+                            <p x-text="proj.desc"></p>
+                        </div>
                     </div>
                     <div class="col-xl-1"></div>
                 </div>
