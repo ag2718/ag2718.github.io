@@ -18,7 +18,7 @@ projects = [
         isLink: true,
         thumbnail: "media/HSQSA.png",
         url: "https://hsqsa.org",
-        desc: "Click on the thumbnail to be taken to the website for the HS Quantum Science Association. The HSQSA is an organization that aims to spread interest in the quantum sciences amongst high schoolers."
+        desc: "Click on the thumbnail to be taken to the website for the HS Quantum Science Association (coded in HTML, CSS, and JS)! The HSQSA is an organization that aims to spread interest in the quantum sciences amongst high schoolers."
     },
     {
         name: "Arduino WiFi Lamp",
