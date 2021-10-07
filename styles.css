@@ -1,5 +1,7 @@
 html {
     max-width: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 @media only screen and (max-width: 500px) {
