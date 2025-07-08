@@ -13,7 +13,7 @@ subtitle: <a href='#'>Massachusetts Institute of Technology</a>.
 #     <p>123 your address street</p>
 #     <p>Your City, State 12345</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -27,6 +27,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm Aarush, a current student at MIT where I'm completing my B.S. in Computer Science and Engineering, Physics, along with an M.Eng. in Computer Science and Engineering. My current research focus is optimizing neural network inference on FPGAs: as part of the [MIT-CERN Particle Physics Collaboration](https://web.mit.edu/lns/research/ppc.html) under Philip Harris, I'm working on low-latency ($\lessapprox 10\;\text{ns}$) and resource-efficient inference for tiny neural networks processing high-throughput data streams at the Large Hadron Collider.
+I'm Aarush, a current student at MIT where I'm completing my B.S. in Computer Science and Engineering, Physics, along with an M.Eng. in Computer Science and Engineering. My current research focus is optimizing neural network inference on FPGAs: as part of the [MIT-CERN Particle Physics Collaboration](https://web.mit.edu/lns/research/ppc.html) under Philip Harris, I'm working on low-latency (∼10 ns) and resource-efficient inference for tiny neural networks processing high-throughput data streams at the Large Hadron Collider.
 
-In the past, I've worked on distributed systems at [Stripe](https://stripe.com), ML research and eng at [Emerald Innovations](https://emeraldinno.com), and more. My interests span AI research, systems and software engineering, and hardware engineering (digital design).
+In the past, I've worked on distributed systems at [Stripe](https://stripe.com), ML research and engineering at [Emerald Innovations](https://emeraldinno.com), and more. My interests span AI research, systems and software engineering, and hardware engineering (digital design).
