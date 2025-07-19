@@ -134,6 +134,8 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
+  posts:
+    output: true
   books:
     output: true
   news:
