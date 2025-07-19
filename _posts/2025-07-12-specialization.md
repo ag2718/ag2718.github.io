@@ -2,7 +2,7 @@
 layout: post
 title: The pitfalls of hyperspecialization
 date: 2025-07-12 18:06:00-0400
-description: A detailed analysis of the tradeoff between epecialization vs. well-roundedness.
+description: A detailed analysis of the tradeoff between specialization vs. well-roundedness.
 tags: musings
 categories: musings
 ---
