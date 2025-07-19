@@ -16,9 +16,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-the-pitfalls-of-quot-hyperspecialization-quot",
+        },{id: "post-the-pitfalls-of-hyperspecialization",
         
-          title: "The pitfalls of &quot;hyperspecialization&quot;",
+          title: "The pitfalls of hyperspecialization",
         
         description: "A detailed analysis of the tradeoff between epecialization vs. well-roundedness.",
         section: "Posts",
