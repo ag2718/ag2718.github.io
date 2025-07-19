@@ -16,7 +16,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "books-the-godfather",
+        },{id: "post-the-pitfalls-of-quot-hyperspecialization-quot",
+        
+          title: "The pitfalls of &quot;hyperspecialization&quot;",
+        
+        description: "A detailed analysis of the tradeoff between epecialization vs. well-roundedness.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/specialization/";
+          
+        },
+      },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
