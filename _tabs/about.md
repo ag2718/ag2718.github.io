@@ -13,4 +13,4 @@ A little bit more about me: I'm currently studying computer science and physics 
 
 I also love to sing! I've been part of a South Asian fusion a cappella group (the MIT Ohms) throughout college and also led the group as president. I'm currently learning guitar, although you probably wouldn't want to hear me play it just yet.
 
-I like to talk in real life, so I figured I would do the same online through this blog. I hope you enjoy!
+I like to talk in real life, so I figured I would do the same online through this blog. Anyways, I hope you enjoy!
