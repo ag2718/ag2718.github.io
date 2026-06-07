@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<div class="post-layout">
+  <article class="post">
+    <h1>{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <span class="post-date">{{ page.date | date: '%d %b %Y' }}</span>
+    </p>
+
+    {{ content }}
+  </article>
+
+  <nav class="post-toc" aria-label="Table of contents" hidden>
+    <h2>Contents</h2>
+    <ol></ol>
+  </nav>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toc = document.querySelector(".post-toc");
+    const tocList = toc.querySelector("ol");
+    const headings = Array.from(
+      document.querySelectorAll(".post h2, .post h3, .post h4"),
+    );
+    const linksByHeadingId = new Map();
+
+    headings.forEach((heading) => {
+      if (!heading.id) {
+        heading.id = heading.textContent
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "");
+      }
+
+      const item = document.createElement("li");
+      item.className = "toc-" + heading.tagName.toLowerCase();
+
+      const link = document.createElement("a");
+      link.href = "#" + heading.id;
+      link.textContent = heading.textContent;
+      linksByHeadingId.set(heading.id, link);
+
+      item.appendChild(link);
+      tocList.appendChild(item);
+    });
+
+    toc.hidden = headings.length === 0;
+
+    function setActiveHeading() {
+      const currentHeading = headings.reduce((current, heading) => {
+        return heading.getBoundingClientRect().top <= 120 ? heading : current;
+      }, headings[0]);
+
+      linksByHeadingId.forEach((link) => {
+        link.classList.remove("active");
+        link.removeAttribute("aria-current");
+      });
+
+      if (currentHeading) {
+        const activeLink = linksByHeadingId.get(currentHeading.id);
+        activeLink.classList.add("active");
+        activeLink.setAttribute("aria-current", "location");
+      }
+    }
+
+    setActiveHeading();
+    document.addEventListener("scroll", setActiveHeading, { passive: true });
+  });
+</script>
+
+<hr />
+
+<p class="post-nav">
+  <a href="{{ '/' | relative_url }}">Back to posts</a>
+</p>

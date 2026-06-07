@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="author"
+      content="{{ site.social.name | default: site.title | escape }}"
+    />
+    <title>
+      {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title |
+      escape }}
+    </title>
+    <link
+      rel="icon"
+      href="{{ '/assets/img/favicons/favicon.ico' | relative_url }}"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+    {% if page.math %}
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          tags: "ams",
+        },
+      };
+    </script>
+    <script
+      async
+      src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"
+    ></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"
+    ></script>
+    {% endif %}
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <header class="header-main container">
+        <div class="header-info">
+          <h1 class="header-title">
+            <a
+              href="{{ '/' | relative_url }}"
+              aria-label="{{ site.title | escape }}"
+              ><span aria-hidden="true">𝓐𝓪𝓻𝓾𝓼𝓱 𝓖𝓾𝓹𝓽𝓪</span></a
+            >
+          </h1>
+          <span class="header-description"
+            >{{ site.description | escape }}</span
+          >
+        </div>
+      </header>
+      <div class="header-border"></div>
+    </div>
+
+    <div class="main-wrapper">
+      <main class="container padded layout-{{ page.layout }}">
+        {{ content }}
+      </main>
+    </div>
+
+    <div style="flex: 1; display: flex"></div>
+  </body>
+</html>
