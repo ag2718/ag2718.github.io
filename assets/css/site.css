@@ -159,6 +159,15 @@ main {
 
 main.layout-post {
   overflow-x: visible;
+  max-width: 1080px;
+}
+
+body.layout-post .header-main {
+  max-width: 1080px;
+}
+
+body.layout-post .header-border {
+  max-width: 1060px;
 }
 
 ul,
