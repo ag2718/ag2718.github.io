@@ -8,22 +8,25 @@ categories: musings
 math: true
 ---
 
-Since I recently graduated, here's a tier list of all the classes I've taken at MIT! I'm not claiming this as an objective ranking in any sense, and factors in my ranking include content, presentation quality, and class organization / structure.
+Since I recently graduated, here's a tier list of all the classes I've taken at MIT! I'm not claiming this as objective in any sense, and factors in my list include content, presentation quality, and class organization / structure.
 
-> Note: I'm trying to be harsher in these rankings, as I honestly enjoyed most classes I took. In reality, a few B's and A's would be upgraded to the A and S tiers, respectively.
+> Note: I'm trying to be harsher here, as I honestly enjoyed most classes I took. In reality, a few B's and A's would be upgraded to the A and S tiers, respectively.
 > - S: Genuinely mind-blowing classes that transformed my way of thinking.
 > - A: Very interesting and well-taught classes that helped me really appreciate a subject.
 > - B: Solid classes that were somewhat enjoyable or accomplished their purpose.
 > - C: Mediocre classes that I didn't really enjoy but were not genuinely horrible.
 > - D: Bad classes that were not enjoyable or valuable, but maybe had one saving grace.
 > - F: Unengaging and useless classes that did not provide positive value.
-{:.prompt-tip}
+{:.prompt-info}
 
 At MIT, I completed a double major in 6-3 (Computer Science and Engineering) and 8 (Physics), with a minor in 18 (Mathematics). I also completed the MEng (Master of Engineering) in my last year, where I published two papers on efficient machine learning algorithms on custom hardware (FPGAs). Read more about my MEng thesis [here](https://aarushgupta.io/posts/kan-fpga)!
 
 ![MIT class tier list](/assets/img/MIT_Class_Tier_List.png)
 *After making this graphic, I realized that even my "harsh" tier-list is quite top skewed...*
 {:.figure-caption}
+
+> **Note:** these are tiers of how much I liked these classes, *not* my grades!
+{:.prompt-tip}
 
 ## ASE (Advanced Standing Examinations)
 
